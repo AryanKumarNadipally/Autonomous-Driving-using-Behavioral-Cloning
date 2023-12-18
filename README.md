@@ -1,39 +1,29 @@
 # Autonomous Driving using Behavioral Cloning
 
-This project uses deep learning to simulate autonomous driving through behavioral cloning, employing a convolutional neural network (CNN) that maps raw pixels from front-facing camera images to steering commands.
+## Project Overview
 
-## Overview
+This project demonstrates the application of deep learning in autonomous driving. By employing a convolutional neural network (CNN), the system learns to steer a car autonomously in a simulated environment. The project is structured into key phases: data preparation, model training, and real-time vehicle control.
 
-The CNN model, inspired by NVIDIA's architecture, is trained on images captured from three camera angles (center, left, and right) alongside driving parameters such as steering angle, throttle, and speed. The trained model then predicts steering angles to autonomously navigate a car on a track.
+## Key Features
 
-## Dataset
+Image Preprocessing: Implemented techniques such as cropping images by 40%, resizing to 200x66 pixels, and normalizing to facilitate efficient model training in a Google Colab GPU environment.
 
-The training data consists of images from a Udacity car simulator, annotated with corresponding driving parameters.
+Data Augmentation: Applied on-the-fly augmentation strategies like random zoom, pan, and brightness adjustments to the training set, significantly enhancing the model's robustness under varying lighting and environmental conditions.
 
-## Development Environments
+Model Architecture: Leveraged NVIDIA's ["End-to-end Learning for Self-Driving Cars"](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) architecture to construct a model with 252,219 trainable parameters, ensuring detailed feature extraction and effective learning.
 
-- **Model Training**: The model was trained in [Google Colab](https://colab.research.google.com/), which provides a powerful GPU-accelerated environment.
-- **Flask Server**: The server application, written in Flask, was developed using [Visual Studio Code](https://code.visualstudio.com/), an extensible code editor.
+Flask Server for Telemetry Data: Developed a Flask server using Visual Studio Code to process real-time telemetry data from the Udacity simulator. The server dynamically manages vehicle control by adjusting the steering angle and throttle based on the model's predictions.
 
-## Preprocessing
+Speed Optimization: Fine-tuned the model to maintain a controlled speed limit, ensuring the vehicle's speed stays below 10 mph for stable and safe autonomous navigation.
 
-Images undergo preprocessing to ensure the neural network receives data in the correct format. This involves cropping irrelevant sections, normalizing pixel values, and resizing images for the model input.
+## Training Details
 
-## Model Architecture
+Dataset: Utilized a dataset of 5,305 driving images from the Udacity simulator, balanced to mitigate straight-driving bias.
 
-The project uses a model architecture similar to the one described by NVIDIA in their self-driving car paper([End to End Learning for Self-Driving Cars](https://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf)). The model comprises several convolutional layers followed by fully connected layers, with dropout for regularization.
+Training Environment: The model was trained in a Google Colab environment, taking advantage of GPU acceleration for efficient computation.
 
-## Data Augmentation
+Validation Loss: Achieved a validation loss of 0.0368 after 10 epochs, indicating a high degree of accuracy in the model's predictions.
 
-Data augmentation techniques such as random zooms, pans, and brightness adjustments are applied to the training data to help the model generalize better to unseen road conditions.
-
-## Flask Server
-
-The Flask server acts as an intermediary between the trained model and the car simulator. It processes the telemetry data from the simulator, runs the model prediction, and sends back steering and throttle commands.
-
-## Results
-
-After training, the model successfully drives the car autonomously around the track without leaving the road.
 
 ## Demo 
 
