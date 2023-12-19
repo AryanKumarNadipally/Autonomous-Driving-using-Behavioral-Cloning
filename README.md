@@ -27,9 +27,15 @@ Validation Loss: Achieved a validation loss of 0.0368 after 10 epochs, indicatin
 
 ## Demo 
 
-![Demo video (3)](https://github.com/AryanKumarNadipally/Autonomous-Driving-using-Behavioral-Cloning/assets/143588978/2d8790c6-a5e4-4314-b85a-8e131ff78398)
+Autonomous Driving on known track
 
-![Demo video](https://github.com/AryanKumarNadipally/Autonomous-Driving-using-Behavioral-Cloning/assets/143588978/0e54a67f-d1b0-4742-8ba7-6e419ed56cbb)
+![Demo1](https://github.com/AryanKumarNadipally/Autonomous-Driving-using-Behavioral-Cloning/assets/143588978/9790f97e-f941-4008-ad68-83558565493d)
+
+
+Autonomous Driving on Unknown Track
+
+![Demo2](https://github.com/AryanKumarNadipally/Autonomous-Driving-using-Behavioral-Cloning/assets/143588978/8b4acfa8-ecd4-4671-b501-c2f09c1a155d)
+
 
 ## Acknowledgements
 
