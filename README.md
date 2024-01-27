@@ -44,3 +44,7 @@ This work was inspired by NVIDIA's pioneering research in autonomous vehicles an
 ## License
 
 The source code is released under the MIT license.
+
+## Output Video
+
+[https://www.dropbox.com/scl/fi/00lj4z9hn8kjdv0x9g8l8/Demo.mp4?rlkey=p0lcfr63ml7n8dh5q9622sugp&dl=0]
